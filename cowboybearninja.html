@@ -1,0 +1,33 @@
+<script>
+
+var wantPlay = prompt("Would you like to play a game of Cowboy, Ninja, Bear? Please say 'yes' - I'd really rather you said 'yes'");
+
+var compChoice = Math.random();
+
+if (compChoice < 0.34) {
+computerChoice = "cowboy";
+} else if(computerChoice <= 0.67) {
+computerChoice = "ninja";
+} else {
+computerChoice = "bear";
+}
+
+if (wantPlay = "yes") {
+	var userChoice = prompt("Sweet! Lets play! Choose Cowboy, Ninja, or Bear:");
+}else{
+	alert("You didn't say 'yes' - You automatically lose. Please try again.")
+}
+
+if (compChoice===userChoice){
+	alert("It's a tie! Please play again. Or don't, I'm not your boss.")
+}else{
+	if (compChoice==="bear"){
+		if (userChoice==="cowboy"){
+			alert("Cowboy shoots bear! You win.");
+		}else{
+			alert("Ninja gets mauled by bear. You lose.");
+		}
+	}
+	
+
+</script>
