@@ -15,6 +15,10 @@ var Animal = function(n, s, f) {
       this.position+=this.speed;
     }
   };
+  this.notYetWon = function() {
+    var distance = 50;
+    return this.position<distance
+  }
 }
 
 var turtle = new Animal("Mitch McConnell",2,8.5);
@@ -22,9 +26,7 @@ var rabbit = new Animal("Bunsauce Hoppalong",8,2);
 var duck = new Animal("Professor Quackingtons",5,5);
 var winner
 
-var distance = 50;
-
-while(turtle.position<distance && rabbit.position<distance) {
+while(turtle.notYetWon() && rabbit.notYetWon() && duck.notYetWon()) {
   turtle.run();
   rabbit.run();
   duck.run();
